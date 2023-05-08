@@ -95,7 +95,7 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h3 class='mapTitle'>Youth Ratio</h3><p>Dependency ratio of populations X or under.</p>
+					<h3 class='mapTitle'>Youth Ratio</h3><p>Dependency ratio of populations 14 or under.</p>
 					<div id="divMap3"></div>
 					<div id="divHist3"></div>
 				</div>
@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'data/WestVirginia.geojson'
+	var polygonJSONFile = 'data/West Virginia.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	var widthheightRatio = 0.4;
@@ -130,7 +130,7 @@
 	var idAttribute = 'FIPS', nameAttribute = 'NAME';
 
 	// Find the abbreviations of color names from https://colorbrewer2.org/
-	var colors =  colorbrewer.PuBu;
+	var colors =  colorbrewer.Blues;
 
 	// Chart/map attributes (variables) and formats based on the divs defined above
 	// For attribute 1 (the same for all others), see the description of the parameters below.
@@ -140,9 +140,9 @@
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
 	var att1 = 'MED_AGE', att1alias = 'Median Age', att1format = '.0f',
-	att2 = '(AGE_UNDER5 + AGE_5_9 + AGE_10_14 + AGE_65_74 + AGE_75_84 + AGE_85_UP)/(AGE_15_19 + AGE_20_24 + AGE_25_34 + AGE_35_44 + AGE_45_54 + AGE_55_64)', att2alias =  'Total Dependency Ratio', att2format = '.1f',
-	att3 = '(AGE_UNDER5 + AGE_5_9 + AGE_10_14)/(AGE_15_19 + AGE_20_24 + AGE_25_34 + AGE_35_44 + AGE_45_54 + AGE_55_64)', att3alias = 'Youth Dependency Ratio', att3format = '.0f',
-	att4 = '(AGE_65_74 + AGE_75_84 + AGE_85_UP)/(AGE_15_19 + AGE_20_24 + AGE_25_34 + AGE_35_44 + AGE_45_54 + AGE_55_64)', att4alias = 'Elderly Dependency Ratio', att4format = '.0f';
+	att2 = 'POPULATION', att2alias =  'Total Population', att2format = '.0f',
+	att3 = 'YouthRatio', att3alias = 'Youth Dependency Ratio', att3format = '.0f',
+	att4 = 'ElderRatio', att4alias = 'Elderly Dependency Ratio', att4format = '.0f';
 
   // enter below all variables that should be recalculated. The order of attributes should match with
 	// the list of multiply and divide by values
