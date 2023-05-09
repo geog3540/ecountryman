@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'data/west_virginia.geojson'
+	var polygonJSONFile = 'data/westvirginia.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	var widthheightRatio = 0.4;
@@ -257,16 +257,16 @@
 				d3.select(d.btn).on('click', function() {
 					d3.selectAll('.btn').classed('active', false);
 					d3.select(this).classed('active', true);
-					var buttonid = d3.select(this).node().id;
-					if(buttonid == "ckmButton"){
-						$(".container").fadeOut(200);
-						functionAlert("Maps cannot be compared visually when natural breaks classification is selected. " +
-					  "Because natural breaks focuses on the recise distribution of each attribute along the number line.");
-					}else if(buttonid == "eqIntButton"){
-						$(".container").fadeOut(200);
-						functionAlert("When equal interval classification is selected, all maps should be"
-						+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
-					}
+					//var buttonid = d3.select(this).node().id;
+					//if(buttonid == "ckmButton"){
+					//	$(".container").fadeOut(200);
+					//	functionAlert("Maps cannot be compared visually when natural breaks classification is selected. " +
+					//  "Because natural breaks focuses on the recise distribution of each attribute along the number line.");
+					//}else if(buttonid == "eqIntButton"){
+					//	$(".container").fadeOut(200);
+					//	functionAlert("When equal interval classification is selected, all maps should be"
+					//	+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
+					//}
 
 					current_scale = d.scale;
 					rescale(polygons);
