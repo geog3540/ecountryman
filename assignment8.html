@@ -28,7 +28,7 @@
 		<div class="container container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="https://geo-social.com">Geog 3540</a>
+				<a class="navbar-brand" href="#">Geog 3540</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="defaultNavbar1">
@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'data/West Virginia.geojson'
+	var polygonJSONFile = 'data/west_virginia.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	var widthheightRatio = 0.4;
@@ -127,7 +127,7 @@
 	var legendX = 0.84, legendY = 0.5
 
 	// id attribute and the name attribute to be used in the tooltip
-	var idAttribute = 'FIPS', nameAttribute = 'NAME';
+	var idAttribute = 'fips_1', nameAttribute = 'name_1';
 
 	// Find the abbreviations of color names from https://colorbrewer2.org/
 	var colors =  colorbrewer.Blues;
@@ -139,10 +139,10 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-	var att1 = 'MED_AGE', att1alias = 'Median Age', att1format = '.0f',
-	att2 = 'POPULATION', att2alias =  'Total Population', att2format = '.0f',
-	att3 = 'YouthRatio', att3alias = 'Youth Dependency Ratio', att3format = '.0f',
-	att4 = 'ElderRatio', att4alias = 'Elderly Dependency Ratio', att4format = '.0f';
+	var att1 = 'medage', att1alias = 'median age', att1format = '.0f',
+	att2 = 'populati_1', att2alias =  'total population', att2format = '.0f',
+	att3 = 'youthrat_1', att3alias = 'youth dependency ratio', att3format = '.0f',
+	att4 = 'elderrat_1', att4alias = 'elderly dependency ratio', att4format = '.0f';
 
   // enter below all variables that should be recalculated. The order of attributes should match with
 	// the list of multiply and divide by values
